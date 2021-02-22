@@ -17,4 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/student/{id}', "StudentController@show");
+Route::get('/student_id/{id}', "StudentController@showID");
+
+Route::get('/student_date/{date}', "StudentController@showDate");
+
+Route::get('/student_age/{age}', "StudentController@showAge");

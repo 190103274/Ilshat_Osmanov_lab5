@@ -1,0 +1,1 @@
+Student with date: <?php echo $date.".";?>

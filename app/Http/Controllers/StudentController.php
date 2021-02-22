@@ -47,10 +47,20 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showID($id)
     {
         $students = $this->get_students();
         return view("student_information", ["name"=>$students[$id]]);
+    }
+
+    public function showDate($date)
+    {
+        return view("student_date") -> with("date", $date);
+    }
+
+    public function showAge($age)
+    {
+        return view("student_age", compact('age'));
     }
 
     /**
